@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 reated by https://www.gitignore.io/api/kotlin
 # Edit at https://www.gitignore.io/?templates=kotlin
 
 ### Kotlin ###
+=======
+>>>>>>> 9679ae999f6d7bae0d736e412c9a5dfa347d2520
 # Compiled class file
 *.class
 
@@ -25,5 +28,6 @@ reated by https://www.gitignore.io/api/kotlin
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
 
 # End of https://www.gitignore.io/api/kotlin

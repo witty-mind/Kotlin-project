@@ -1,5 +1,5 @@
 fun main() {
-    println("Hello world")
+    // println("Hello world")
 
     /*val additionResult = addTwoNumbers(100, 40)
     println(additionResult);
@@ -7,13 +7,30 @@ fun main() {
     getLargestNumberFromGivenNumbers(100, 24, 18)*/
 
 
-    printMessage("Hello")                                               // 5
-    printMessageWithPrefix("Hello", "Log")                              // 6
-    printMessageWithPrefix("Hello")                                     // 7
-    printMessageWithPrefix(prefix = "Log", message = "Hello")           // 8
-    println(sum(1, 2))
+    /* printMessage("Hello")                                               // 5
+     printMessageWithPrefix("Hello", "Log")                              // 6
+     printMessageWithPrefix("Hello")                                     // 7
+     printMessageWithPrefix(prefix = "Log", message = "Hello")           // 8
+     println(sum(1, 2))*/
+
+    //printMessageOnDemand("There is no internet connection. Please try again later.", "Signals")
+
+    //foo(baz = 1)
+
+    /*fooBar(1) { println("hello") }     // Uses the default value baz = 1
+    fooBar(qux = { println("hello") }) // Uses both default values bar = 0 and baz = 1
+    fooBar { println("hello") }        // Uses both default values bar = 0 and baz = 1*/
+
+   // defaultValueParameters("dev_ritz", getDashValue = "Test", isStatus = true);
+
+    val getData = accumulate(100)
+    print(getData)
+
 
 }
+
+
+fun double(x: Int): Int = x * 2
 
 fun addTwoNumbers(numberOne: Int, numberTwo: Int): Int {
     return numberOne + numberTwo;
@@ -51,3 +68,39 @@ fun sum(x: Int, y: Int): Int {                                          // 3
 
 // A single-expression function that returns an integer (inferred).
 fun multiply(x: Int, y: Int) = x * y
+
+fun printMessageOnDemand(messageText: String, titleText: String = "No Internet") {
+    print("The Message To Be displayed is \n \n $titleText \n \n $messageText")
+}
+
+fun foo(bar: Int = 0, baz: Int) {
+    println(bar)
+    println(baz)
+}
+
+fun fooBar(bar: Int = 0, baz: Int = 1, qux: () -> Unit) {
+    println(bar)
+    println(baz)
+}
+
+fun defaultValueParameters(getVerifiedUerName: String, getDashValue: String, isStatus: Boolean) {
+    var testValue: Int = 0
+    fun addThisNumbers(){
+        val getDetailsDataOf: Int = 1000
+        testValue = 10 + 30 + getDetailsDataOf
+    }
+    println(getVerifiedUerName)
+    println(getDashValue)
+    println(testValue)
+}
+
+fun accumulate(number: Int): Int {
+    var givenNumber = number
+    fun add() {
+        givenNumber++
+    }
+    for (i in 1..10) {
+        add()
+    }
+    return givenNumber
+}

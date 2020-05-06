@@ -1,3 +1,3 @@
-class User(s: String) {
+class User(s: String, active: Boolean) {
 
 }
